@@ -1,4 +1,3 @@
-
 const localStorageManager = {
     set: (name, data) => {
         localStorage.setItem(name, JSON.stringify(data))

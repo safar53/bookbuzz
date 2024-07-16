@@ -13,7 +13,7 @@ import {routes} from 'src/utils/routes'
 import clsx from 'clsx'
 import useOnClickOutside from 'src/utils/hooks/useOutsideClick'
 import {setCartItems} from 'src/store/header/headerSlice'
-// import ProductService from 'src/api/product'
+import ProductService from 'src/api/product'
 
 const checkIsCartItem = item => {
     return item?.name?.toLowerCase() === 'cart'
@@ -35,31 +35,7 @@ const Header = () => {
 
     const searchProducts = async key => {
         try {
-            // const {result} = await ProductService.searchProducts(key)
-            const {result} = {
-                isError: false,
-                errorMessage: null,
-                result:{
-                    products:[
-                        {
-                            id: '678',
-                            title: 'namebook12',
-                            subtitleShort: 'Some subtitle test lorep ipsum Some subtitle test lorep ipsum',
-                            numOfLikes: 98,
-                            price: 9.99,
-                            mainImage: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Fbook&psig=AOvVaw0mLKFLJ3T9s6ST75_1280W&ust=1687198159034000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKjsrYq1zf8CFQAAAAAdAAAAABAE'
-                        },
-                        {
-                            id: '542',
-                            title: 'namebook167',
-                            subtitleShort: 'Some subtitle test lorep ipsurrm Some subtitle test lorep ipsum',
-                            numOfLikes: 108,
-                            price: 6.55,
-                            mainImage: 'https://www.freepik.com/free-photo/front-view-three-colored-stacked-books-with-copy-space_12151845.htm#query=book&position=11&from_view=keyword&track=sph&uuid=1ec80019-5a8d-4a7b-a303-fc49261c6d32'
-                        }
-                    ]
-                }
-            }
+            const {result} = await ProductService.searchProducts(key)
             setSearchResult(result?.products)
         } catch (e) {
             return
