@@ -1,9 +1,14 @@
 const localStorageManager = {
     set: (name, data) => {
-        localStorage.setItem(name, JSON.stringify(data))
+        if (typeof window !== 'undefined' && window.localStorage) {
+            localStorage.setItem(name, JSON.stringify(data))
+        }
     },
     get: name => {
-        return JSON.parse(localStorage.getItem(name))
+        if (typeof window !== 'undefined' && window.localStorage) {
+            return JSON.parse(localStorage.getItem(name))
+        }
+        return null
     }
 }
 

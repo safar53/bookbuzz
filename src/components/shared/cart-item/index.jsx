@@ -22,15 +22,20 @@ const CartItem = ({
     const increment = () => {
         setCount(count + 1)
         dispatch(setCartItems(updateCountById(cartItems, product?.id)))
+        localStorageManager.set('cart', updateCountById(cartItems, product?.id))
     }
 
     const decrement = () => {
         count > 1 ? setCount(count - 1) : setCount(1)
-        count > 0 && dispatch(setCartItems(updateCountById(cartItems, product?.id, false)))
+        if (count > 0) {
+            dispatch(setCartItems(updateCountById(cartItems, product?.id, false)))
+            localStorageManager.set('cart', updateCountById(cartItems, product?.id, false))
+        }
     }
 
     const remove = () => {
         dispatch(setCartItems(cartItems?.filter(item => item?.id !== product?.id)))
+        localStorageManager.set('cart', cartItems?.filter(item => item?.id !== product?.id))
     }
 
     useEffect(() => {

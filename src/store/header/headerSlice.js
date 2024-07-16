@@ -9,7 +9,6 @@ export const headerSlice = createSlice({
     },
     reducers: {
         setCartItems: (state, action) => {
-            localStorageManager.get('cart', action.payload)
             state.cartItems = action.payload
         }
     }
