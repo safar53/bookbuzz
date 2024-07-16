@@ -28,7 +28,11 @@ const Header = () => {
     const [searchResult, setSearchResult] = useState(null)
     const [isInfobarOpen, setIsInfobarOpen] = useState(false)
     const [debounced] = useDebounce(searchText, 1000)
-    const isLoggedIn = localStorage.getItem('token')
+
+    let isLoggedIn
+    if (typeof window !== 'undefined' && window.localStorage) {
+        isLoggedIn = localStorage.getItem('token')
+    }
 
     useOnClickOutside(infobarRef, () => setIsInfobarOpen(false))
     useOnClickOutside(inputRef, () => setSearchResult(null))
@@ -92,7 +96,7 @@ const Header = () => {
                                 >
                                     {item?.name}
                                     {
-                                        checkIsCartItem(item) && localStorage.getItem('token') && <small>{cartItems?.length}</small>
+                                        checkIsCartItem(item) && isLoggedIn && <small>{cartItems?.length}</small>
                                     }
                                 </Link>
                             </li>
@@ -113,7 +117,9 @@ const Header = () => {
                                     })}
                                     onClick={() => {
                                         dispatch(setCartItems([]))
-                                        localStorage.clear()
+                                        if (typeof window !== 'undefined' && window.localStorage) {
+                                            localStorage.clear()
+                                        }
                                     }}
                                 >
                                     {text.logout}

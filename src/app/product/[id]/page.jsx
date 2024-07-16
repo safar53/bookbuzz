@@ -34,7 +34,11 @@ const ProductDetails = ({params}) => {
     const id = params?.id
     const [productDetails, setProductDetails] = useState()
     const [count, setCount] = useState(1)
-    const token = localStorage.getItem('token')
+
+    let token
+    if (typeof window !== 'undefined' && window.localStorage) {
+        token = localStorage.getItem('token')
+    }
 
     const addToCart = () => {
         let arr = []
