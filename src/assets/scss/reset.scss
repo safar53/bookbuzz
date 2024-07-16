@@ -1,0 +1,18 @@
+@font-face {
+  font-family: InterRegular;
+  src: url("./../fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: InterBold;
+  src: url("./../fonts/Inter/Inter-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}

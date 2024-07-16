@@ -1,0 +1,17 @@
+{
+    "login": "Log In",
+    "logout": "Log Out",
+    "email": "Email",
+    "password": "Password",
+    "cart": "Cart",
+    "search_by": "Search for books by title",
+    "company_name": "BookBuzz",
+    "no_result": "No result...",
+    "all_products": "Brows all books",
+    "add_to_cart": "Add to cart",
+    "shopping_cart": "Shopping cart",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "checkout": "Checkout"
+}

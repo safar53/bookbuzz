@@ -1,0 +1,175 @@
+@import "src/assets/scss/variables";
+
+.header {
+    width: 100vw;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .search {
+        position: relative;
+
+        input {
+            border: 1px solid #c4b7b7;
+            border-radius: 12px;
+            height: 40px;
+            min-width: 400px;
+            padding: 16px;
+            color: $color-black;
+            font-family: InterRegular, sans-serif;
+            font-size: 16px;
+        }
+
+        .icon {
+            position: absolute;
+            right: 16px;
+            top: 12px;
+        }
+
+        .result {
+            width: 100%;
+            top: calc(100% + 12px);
+            background-color: $color-white;
+            z-index: 5;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            position: absolute;
+            border-radius: 12px;
+            box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+            max-height: 400px;
+            overflow-y: auto;
+
+            a,
+            p {
+                color: $color-black;
+                font-family: InterRegular, sans-serif;
+                font-size: 14px;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            column-gap: 32px;
+            align-items: center;
+
+            li {
+                a {
+                    color: $color-black;
+                    font-size: 16px;
+                    font-family: InterBold, sans-serif;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    span {
+                        padding: 8px 18px;
+                        background-color: $color-black;
+                        color: $color-white;
+                        border-radius: 12px;
+                    }
+                }
+
+                &.avatar {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    border: 1px solid $color-black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    position: relative;
+
+                    svg {
+                        width: 70%;
+                        height: 70%;
+                    }
+
+                    .logout {
+                        position: absolute;
+                        padding: 8px 12px;
+                        right: 0;
+                        top: calc(100% + 12px);
+                        border-radius: 10px;
+                        border: 1px solid $color-black;
+                        width: max-content;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 400ms all;
+                    }
+
+                    .active {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                &.cart {
+                    position: relative;
+                    margin-right: 8px;
+
+                    small {
+                        position: absolute;
+                        padding: 2px;
+                        width: 24px;
+                        height: 24px;
+                        background-color: $color-black;
+                        color: $color-white;
+                        font-family: InterBold, sans-serif;
+                        font-size: 12px;
+                        border-radius: 50%;
+                        bottom: calc(100% - 4px);
+                        left: calc(100% - 4px);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    .header {
+        width: 100vw;
+        padding: 16px;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 18px;
+    
+        .search {
+            width: 100%;
+
+            input {
+                min-width: 100%;
+            }
+        }
+    
+        nav {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                column-gap: 12px;
+                justify-content: flex-end;
+    
+                li {
+                    a {
+                        font-size: 14px;
+    
+                        span {
+                            padding: 8px 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

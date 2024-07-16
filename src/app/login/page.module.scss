@@ -1,0 +1,49 @@
+@import 'src/assets/scss/variables';
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  
+  .imageContainer,
+  .form {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form {
+    flex-direction: column;
+    row-gap: 64px;
+
+    .formHeader {
+      font-family: InterBold, sans-serif;
+    }
+
+    .formElements {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .login {
+    flex-direction: column;
+    padding: 56px 0;
+    height: max-content;
+    
+    .imageContainer,
+    .form {
+      width: 100%;
+    }
+  
+    .form {
+      row-gap: 36px;
+    }
+  }
+}

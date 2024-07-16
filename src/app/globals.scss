@@ -1,0 +1,75 @@
+@import 'src/assets/scss/reset';
+@import 'src/assets/scss/variables';
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  main {
+    flex: 1;
+  }
+}
+
+.Toastify__toast-theme--light {
+    border-radius: 6px !important;
+  
+    .Toastify__toast-body {
+      color: $color-black;
+      font-weight: 500;
+      line-height: 22px;
+      font-size: 16px;
+      font-family: InterRegular, sans-serif;
+    }
+  
+    .Toastify__close-button {
+      opacity: 1;
+      align-self: unset;
+  
+      svg {
+        width: 20px;
+        height: 20px;
+  
+        path {
+          fill: $color-black;
+        }
+      }
+    }
+  
+    &.Toastify__toast--success {
+      background-color: #98eca4;
+  
+      .Toastify__progress-bar--success {
+        background-color: #065f13;
+      }
+    }
+  
+    &.Toastify__toast--error {
+      background-color: #f0a3a3;
+  
+      .Toastify__progress-bar--success {
+        background-color: #970606;
+      }
+    }
+}
+
+.slick-track {
+  display: flex !important;
+  justify-content: space-between;
+
+  .slick-slide {
+      border-radius: 16px !important;
+      overflow: hidden !important;
+      width: calc((100% - 32px) / 3) !important;
+      position: relative;
+      padding-top: calc((100% - 32px) / 3) !important;
+
+      img {
+        position:  absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+  }
+}

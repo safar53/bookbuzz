@@ -1,0 +1,61 @@
+@import 'src/assets/scss/variables';
+
+.cart {
+  width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  column-gap: 44px;
+  
+  .cartItems {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 18px;
+    border-radius: 16px;
+    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+  }
+
+  .shoppingCart {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ddd8d8;
+    border-radius: 16px;
+    padding: 12px;
+
+    h3 {
+      color: $color-black;
+      font-size: 18px;
+      padding: 8px 24px;
+      font-family: InterBold, sans-serif;
+      text-align: left;
+      border-bottom: 1px solid $color-white;
+    }
+
+    .prices {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      color: #333;
+      font-size: 14px;
+      font-family: InterRegular, sans-serif;
+    }
+
+    button {
+      border: none;
+      background-color: $color-black;
+      padding: 12px 24px;
+      color: $color-white;
+      font-family: InterBold, sans-serif;
+      border-radius: 12px;
+      margin-top: 18px;
+      width: 100%;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.7;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "menu_items": [
+        {
+            "name": "Products",
+            "path": "/products/"
+        },
+        
+        {
+            "name": "Cart",
+            "path": "/cart/"
+        }
+    ]
+}

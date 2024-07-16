@@ -1,0 +1,84 @@
+@import "src/assets/scss/variables";
+
+.footer {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #c2baba;
+
+    .company,
+    ul {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 56px 0;
+    }
+
+    .company {
+        font-size: 32px;
+        font-family: InterBold, sans-serif;
+        color: $color-black;
+    }
+
+    ul {
+        column-gap: 32px;
+        justify-content: flex-start;
+
+        li {
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+             
+            h5 {
+                font-size: 14px;
+                color: #333;
+                font-family: InterBold, sans-serif;
+                margin-bottom: 8px;
+            }
+
+            ul {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: unset;
+                row-gap: 8px;
+
+                li {
+                    a {
+                        font-size: 12px;
+                        color: #333;
+                        font-family: InterRegular, sans-serif;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    .footer {
+        flex-direction: column-reverse;
+    
+        .company,
+        ul {
+            width: 100%;
+            padding: 32px 16px;
+        }
+    
+        .company {
+            font-size: 24px;
+        }
+    
+        ul {
+            column-gap: unset;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+    }
+}

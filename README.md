@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# frontend-bookbuzz
+BookBuzz App
 
-## Getting Started
+### Node version
 
-First, run the development server:
+20.15.1
 
-```bash
-npm run dev
-# or
+### Yarn version
+
+1.22.22
+
+### For install node_modules
+
+yarn install
+
+### Environment Variables
+
+Before running the project, ensure that a `.env` file exists. You can create this file by making a duplicate of the provided `.env.example` file and filling it with your specific configuration details.
+
+### For build project
+
+yarn build
+
+### For run project
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### For run stylelint
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+yarn stylelint
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### For fix stylelint errors
 
-## Learn More
+yarn stylelint-fix
 
-To learn more about Next.js, take a look at the following resources:
+### For run eslint
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+yarn eslint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### For fix eslint
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+yarn eslint-fix

@@ -1,0 +1,18 @@
+@import "src/assets/scss/variables";
+
+.button {
+    width: 100%;
+    border: none;
+    border-radius: 22px;
+    height: 44px;
+    background-color: $color-black;
+    color: $color-white;
+    font-size: 16px;
+    font-family: InterRegular, sans-serif;
+    cursor: pointer;
+
+    &:disabled {
+        opacity: 0.8;
+        cursor: progress;
+    }
+}

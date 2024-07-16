@@ -1,0 +1,36 @@
+@import 'src/assets/scss/variables';
+
+.products {
+  width: 100%;
+  padding: 40px;
+  
+  h2 {
+    color: $color-black;
+    font-family: InterBold, sans-serif;
+    font-size: 32px;
+    margin-bottom: 44px;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+  .products {
+    padding: 32px 16px;
+    
+    h2 {
+      font-size: 22px;
+      margin-bottom: 28px;
+    }
+  
+    ul {
+      gap: 18px;
+    }
+  }
+}

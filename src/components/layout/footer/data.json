@@ -1,0 +1,61 @@
+{
+    "sections": [
+        {
+            "name": "Social",
+            "sub_items": [
+                {
+                    "name": "Facebook",
+                    "url": "/"
+                },
+                {
+                    "name": "Instagram",
+                    "url": "/"
+                },
+                {
+                    "name": "Linkedin",
+                    "url": "/"
+                }
+            ]
+        },
+        {
+            "sub_items": [
+                {
+                    "name": "Get help",
+                    "url": "/"
+                },
+                {
+                    "name": "Partner with us",
+                    "url": "/"
+                },
+                {
+                    "name": "Add your bookshop",
+                    "url": "/"
+                },
+                {
+                    "name": "Sign up to sell books",
+                    "url": "/"
+                }
+            ]
+        },
+        {
+            "sub_items": [
+                {
+                    "name": "Read our blog",
+                    "url": "/"
+                },
+                {
+                    "name": "Buy gift card",
+                    "url": "/"
+                },
+                {
+                    "name": "Bookshops nearby",
+                    "url": "/"
+                },
+                {
+                    "name": "Save on first order",
+                    "url": "/"
+                }
+            ]
+        }
+    ]
+}
