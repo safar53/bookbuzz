@@ -13,5 +13,7 @@
     "subtotal": "Subtotal",
     "shipping": "Shipping",
     "total": "Total",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "cart_empty": "Cart is empty",
+    "not_found": "Book not found"
 }

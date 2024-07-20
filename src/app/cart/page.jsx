@@ -30,9 +30,10 @@ const Cart = () => {
 
     return (
         <main className={styles.cart}>
+            <h2>{text.cart}</h2>
             {
                 cartItems?.length > 0 ?
-                    <>
+                    <div className={styles.container}>
                         <div className={styles.cartItems}>
                             {
                                 cartItems?.map(item => (
@@ -67,7 +68,7 @@ const Cart = () => {
                                 </button>
                             </div>
                         </div>
-                    </> : <p>{text.no_result}</p>
+                    </div> : <p>{text.cart_empty}</p>
             }
         </main>
     )

@@ -32,15 +32,19 @@ const Login = () => {
     const [isLoaderActive, setIsLoaderActive] = useState(false)
     const [isPasswordVisible, setIsPasswordVisible] = useState(false)
 
-    const login = async data => {
+    const login = async payload => {
         setIsLoaderActive(true)
         try {
-            const {result} = await AuthService.login(data)
-            localStorage.setItem('token', result?.jwt)
-            await dispatch(setCartItems(filterAndCombine(localStorageManager.get('desired'))))
-            await localStorageManager.set('cart', localStorageManager.get('desired'))
-            localStorage.removeItem('desired')
-            router.push(routes.cart.path)
+            const {data} = await AuthService.login(payload)
+            localStorage.setItem('token', data?.result?.jwt)
+            if (localStorageManager.get('desired')) {
+                await dispatch(setCartItems(filterAndCombine(localStorageManager.get('desired'))))
+                await localStorageManager.set('cart', localStorageManager.get('desired'))
+                router.push(routes.cart.path)
+                localStorage.removeItem('desired')
+                return
+            }
+            router.push(routes.products.path)
         } catch (e) {
             toast.error(e.message)
         }

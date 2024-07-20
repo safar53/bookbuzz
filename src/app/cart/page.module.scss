@@ -3,58 +3,77 @@
 .cart {
   width: 100vw;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   padding: 40px;
-  column-gap: 44px;
-  
-  .cartItems {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 18px;
-    border-radius: 16px;
-    box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
+  row-gap: 44px;
+
+  h2 {
+    color: $color-black;
+    font-family: InterBold, sans-serif;
+    font-size: 32px;
   }
 
-  .shoppingCart {
-    display: flex;
-    justify-content: flex-start;
-    background-color: #ddd8d8;
-    border-radius: 16px;
-    padding: 12px;
+  p {
+    color: $color-black;
+    font-family: InterRegular, sans-serif;
+    font-size: 16px;
+  }
 
-    h3 {
-      color: $color-black;
-      font-size: 18px;
-      padding: 8px 24px;
-      font-family: InterBold, sans-serif;
-      text-align: left;
-      border-bottom: 1px solid $color-white;
-    }
-
-    .prices {
+  .container {
+      width: 100vw;
       display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      color: #333;
-      font-size: 14px;
-      font-family: InterRegular, sans-serif;
+      align-items: flex-end;
+      column-gap: 44px;
+
+    .cartItems {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 18px;
+      border-radius: 16px;
+      box-shadow: rgb(0 0 0 / 24%) 0 3px 8px;
     }
-
-    button {
-      border: none;
-      background-color: $color-black;
-      padding: 12px 24px;
-      color: $color-white;
-      font-family: InterBold, sans-serif;
-      border-radius: 12px;
-      margin-top: 18px;
-      width: 100%;
-      cursor: pointer;
-
-      &:disabled {
-        opacity: 0.7;
+  
+    .shoppingCart {
+      display: flex;
+      justify-content: flex-start;
+      background-color: #ddd8d8;
+      border-radius: 16px;
+      padding: 12px;
+  
+      h3 {
+        color: $color-black;
+        font-size: 18px;
+        padding: 8px 24px;
+        font-family: InterBold, sans-serif;
+        text-align: left;
+        border-bottom: 1px solid $color-white;
+      }
+  
+      .prices {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        color: #333;
+        font-size: 14px;
+        font-family: InterRegular, sans-serif;
+      }
+  
+      button {
+        border: none;
+        background-color: $color-black;
+        padding: 12px 24px;
+        color: $color-white;
+        font-family: InterBold, sans-serif;
+        border-radius: 12px;
+        margin-top: 18px;
+        width: 100%;
+        cursor: pointer;
+  
+        &:disabled {
+          opacity: 0.7;
+        }
       }
     }
   }

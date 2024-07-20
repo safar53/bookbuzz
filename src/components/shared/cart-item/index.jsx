@@ -10,6 +10,7 @@ import {shortenText} from 'src/utils/text'
 import {routes} from 'src/utils/routes'
 import {setCartItems} from 'src/store/header/headerSlice'
 import {updateCountById} from 'src/utils/array'
+import localStorageManager from 'src/utils/localStorage'
 
 const CartItem = ({
     product

@@ -3,6 +3,13 @@
 .container {
   padding: 40px;
   display: flex;
+  justify-content: center;
+
+  p {
+    color: $color-black;
+    font-family: InterRegular, sans-serif;
+    font-size: 16px;
+  }
 
   .details {
     display: flex;

@@ -2,6 +2,7 @@
 
 import {useState, useEffect, useRef} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
+import {usePathname} from 'next/navigation'
 import {useDebounce} from 'use-debounce'
 import Link from 'next/link'
 import {FaSearch, FaUser} from 'react-icons/fa'
@@ -21,6 +22,7 @@ const checkIsCartItem = item => {
 
 const Header = () => {
     const dispatch = useDispatch()
+    const pathname = usePathname()
     const infobarRef = useRef(null)
     const inputRef = useRef(null)
     const cartItems = useSelector((state) => state.header.cartItems)
@@ -39,8 +41,8 @@ const Header = () => {
 
     const searchProducts = async key => {
         try {
-            const {result} = await ProductService.searchProducts(key)
-            setSearchResult(result?.products)
+            const {data} = await ProductService.searchProducts(key)
+            setSearchResult(data?.result?.products)
         } catch (e) {
             return
         }
@@ -52,9 +54,8 @@ const Header = () => {
 
     return (
         <header className={styles.header}>
-            <div className={styles.search}>
+            <div ref={inputRef} className={styles.search}>
                 <input
-                    ref={inputRef}
                     value={searchText}
                     type='text'
                     placeholder={text.search_by}
@@ -88,7 +89,8 @@ const Header = () => {
                             <li
                                 key={item?.path}
                                 className={clsx({
-                                    [styles.cart]: checkIsCartItem(item)
+                                    [styles.cart]: checkIsCartItem(item),
+                                    [styles.active]: pathname?.includes(item?.path)
                                 })}
                             >
                                 <Link

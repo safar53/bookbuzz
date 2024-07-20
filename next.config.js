@@ -1,5 +1,5 @@
 module.exports = {
-    reactStrictMode: true,
+    reactStrictMode: false,
     trailingSlash: true,
     images: {
         unoptimized: true

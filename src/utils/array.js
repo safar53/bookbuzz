@@ -1,7 +1,7 @@
 const filterAndCombine = items => {
     const arr = new Map()
 
-    items.forEach(item => {
+    items?.forEach(item => {
         if (arr.has(item.id)) {
             arr.get(item.id).count += 1
         } else {

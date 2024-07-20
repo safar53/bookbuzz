@@ -1,7 +1,7 @@
 import DefaultLayout from 'src/components/layout/DefaultLayout'
 
 export const metadata = {
-    title: 'BookBuzzCart',
+    title: 'BookBuzz Cart',
     description: 'BookBuzz Cart'
 }
 

@@ -11,6 +11,12 @@
     margin-bottom: 44px;
   }
 
+  p {
+    color: $color-black;
+    font-family: InterRegular, sans-serif;
+    font-size: 16px;
+  }
+
   ul {
     display: flex;
     align-items: center;
